@@ -1,0 +1,9 @@
+server:
+  port: 1985
+  servlet:
+    context-path: /template/service
+template:
+  aTemplateProperty: template
+spring:
+  application:
+    name: templateService
