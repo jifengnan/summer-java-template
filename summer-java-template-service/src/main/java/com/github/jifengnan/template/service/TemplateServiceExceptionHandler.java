@@ -1,7 +1,7 @@
 package com.github.jifengnan.template.service;
 
-import com.github.jifengnan.template.api.exception.TopLevelBizException;
-import com.github.jifengnan.template.api.model.TemplateHttpResult;
+import com.github.jifengnan.template.base.exception.TopLevelBizException;
+import com.github.jifengnan.template.base.model.TemplateHttpResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.ConversionNotSupportedException;
 import org.springframework.beans.TypeMismatchException;
@@ -103,10 +103,9 @@ public class TemplateServiceExceptionHandler {
                 request.getServletPath());
     }
 
-    private final Map<Class, HttpStatus> EXCEPTION_CODE_MAPPING;
+    private static final Map<Class, HttpStatus> EXCEPTION_CODE_MAPPING = new HashMap<>();
 
-    public TemplateServiceExceptionHandler() {
-        EXCEPTION_CODE_MAPPING = new HashMap<>();
+    static {
         EXCEPTION_CODE_MAPPING.put(HttpRequestMethodNotSupportedException.class, HttpStatus.METHOD_NOT_ALLOWED);
         EXCEPTION_CODE_MAPPING.put(HttpMediaTypeNotSupportedException.class, HttpStatus.UNSUPPORTED_MEDIA_TYPE);
         EXCEPTION_CODE_MAPPING.put(HttpMediaTypeNotAcceptableException.class, HttpStatus.NOT_ACCEPTABLE);

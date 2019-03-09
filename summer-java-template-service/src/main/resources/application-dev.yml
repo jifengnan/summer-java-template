@@ -3,7 +3,7 @@ server:
   servlet:
     context-path: /template/service
 template:
-  aTemplateProperty: template
+  aTemplateProperty: template-dev
 spring:
   application:
-    name: templateService
+    name: template-service
