@@ -1,4 +1,4 @@
-package com.github.jifengnan.template.api.model;
+package com.github.jifengnan.template.base.model;
 
 import lombok.Getter;
 import lombok.Setter;

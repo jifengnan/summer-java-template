@@ -1,4 +1,4 @@
-package com.github.jifengnan.template.api.exception;
+package com.github.jifengnan.template.base.exception;
 
 /**
  * This class represents a top level business exception for a project.<p/>
